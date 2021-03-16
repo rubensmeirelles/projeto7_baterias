@@ -1,0 +1,181 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+body{
+  padding-bottom: 150px;
+}
+
+.container{
+  width: 980px;
+  margin: 0 auto;
+}
+
+.container .acoustic{
+  padding-top: 150px;
+  padding-bottom: 30px;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+header{
+  top: 0;
+  position: fixed;
+  padding: 30px 0;
+  background: rgb(20, 30, 33);
+  box-shadow: 0px 4px 6px rgba(28, 24, 38, .5);
+  margin-bottom: 30px;
+  min-width: 100vw;
+  z-index: 1000;
+}
+
+.menu ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu ul li{
+  margin: 0 20px;
+}
+
+.menu ul li a{
+  background: #1B9696;
+  padding: 10px 15px;
+  color: #1C1826;
+  border-radius: 2px;
+  transition: .3s;
+}
+
+.menu ul li a:hover, .menu ul li a.active::after{
+  background: #1C1826;
+  color: #1B9696;
+  border: 1px solid #1B9696;
+}
+
+.tab-menu{
+  margin: 20px 0;
+  display: flex;
+}
+
+.tab-menu li{
+  margin-right: 10px;
+}
+
+.tab-menu li a{
+  padding: 5px 10px;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #1C1826;
+  transition: .5s;
+}
+
+.tab-menu li a:hover{
+  border-top: 1px solid #1C1826;
+  border-bottom: 1px solid #1C1826;
+}
+
+.tab-menu li a.active{
+  background: #18466B;
+  color: #f0f0f0;
+}
+
+.itemDrum{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  opacity: 0;
+  top: 0;
+  visibility: hidden;
+  position: absolute;
+  transform: translate3d(-50px, 0, 0);
+  padding-bottom: 120px;
+  
+}
+
+.itemDrum.active{
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  top: auto;
+  transition: .3s;
+  transform: translate3d(0px, 0, 0);
+}
+
+img{
+  width: 100%;
+  height: 400px;
+  display: block;
+  float: right;
+  top: 0;
+  bottom: 0;
+}
+
+.img-drum{
+  width: 50%;
+  float: left;
+  margin: 0 auto;
+  position: relative;
+  padding: 1px;  
+  box-shadow: .1px 2px 3px 2px rgba(28, 24, 38, .5);
+}
+
+.img-drum h2{
+  position: absolute;
+  background: rgb(48, 27, 44);
+  color: #f0f0f0;
+  width: 150px;
+  padding: 10px 15px;
+  text-align: center;
+  bottom: -25px;
+  left: -10px;
+}
+
+.drum-info{
+  width: 50%;
+  float: left;
+  margin-left: 30px;
+}
+
+/*Responsivo*/
+
+@media screen and (max-width:980px){
+  .container > section{
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width:760px){
+  .container > section{
+    padding: 0 50px;
+  }
+  .itemDrum{
+    display: flex;
+    flex-direction: column;
+  }
+
+  img{
+    width: 100%;
+  }
+  
+  .img-drum{
+    width: 100%;
+  }
+
+  .drum-info{
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+
+
